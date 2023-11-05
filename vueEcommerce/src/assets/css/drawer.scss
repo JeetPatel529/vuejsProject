@@ -1,0 +1,162 @@
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(210, 210, 215, 0.35);
+    backdrop-filter: blur(0.2dvw);
+    z-index: 1200;
+    cursor: pointer;
+    display: none;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.product-drawer-show {
+    right: 0 !important;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.product-drawer {
+    position: fixed;
+    right: -50dvw;
+    top: 0;
+    height: 100dvh;
+    width: 100%;
+    max-width: 50dvw;
+    background-color: $color1;
+    z-index: 1828;
+    overflow-y: auto;
+    border-left: 1px solid $color7;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+
+    .drawer-head {
+        border-bottom: 1px solid $color7;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1.7dvw 1.8dvw;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        background-color: $color1;
+
+        button {
+            background-color: transparent;
+            border: 0;
+            padding: 0.3dvw;
+            cursor: pointer;
+
+            svg {
+                width: 1.77dvw;
+                height: 1.77dvw;
+            }
+
+        }
+
+    }
+
+    .drawer-body {
+        position: relative;
+
+        .removebtn {
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+            padding: 0.2dvw 0.6dvw;
+            color: #808080;
+        }
+
+        .product-details {
+            display: flex;
+            align-items: center;
+            gap: 1.1dvw;
+            margin-top: 2dvw;
+
+            &:nth-child(1) {
+                margin-top: 0;
+            }
+
+            .img-section {
+                min-width: 32%;
+                max-width: 32%;
+                padding-top: 32%;
+                border: 1px solid $color7;
+                position: relative;
+
+                img {
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            }
+
+            .subtitle {
+                margin-bottom: 0.2dvw;
+            }
+
+            .product-price {
+                margin-top: 0.2dvw;
+            }
+
+        }
+
+        .flex-between {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .message {
+            width: 100%;
+            background-color: transparent;
+            border: 0;
+            resize: none;
+            min-height: 9dvw;
+            font-size: 1.2dvw;
+
+            &:focus {
+                outline: none;
+            }
+
+        }
+
+        .w-50 {
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        .button {
+            background-color: $color7;
+            color: $color1;
+            border-top: 0;
+            // position: absolute;
+            // left: 0;
+            // bottom: 0;
+
+            &:hover {
+                background-color: transparent;
+                color: $color7;
+            }
+        }
+
+    }
+
+}

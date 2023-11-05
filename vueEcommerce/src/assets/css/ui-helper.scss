@@ -1,0 +1,105 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fontregular;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    color: $color6;
+    font-size: 1.12vw;
+    font-weight: 400;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.flex-vertical-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button {
+    color: $color6;
+    letter-spacing: .03vw;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid $color7;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25vw 1.7vw 1.12vw;
+    transition: color .3s cubic-bezier(.165, .84, .44, 1), background-color .3s cubic-bezier(.165, .84, .44, 1);
+    display: flex;
+    cursor: pointer;
+    width: fit-content;
+
+    &:hover {
+        background-color: $color6;
+        color: $color2;
+    }
+
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+.content {
+    padding: 5.56vw;
+}
+
+.content-small {
+    padding: 2.8vw;
+    overflow: hidden;
+}
+
+.container {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    display: grid;
+    width: 100%;
+
+    .grid-wrapper-left {
+        width: 100%;
+    }
+
+
+    .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+
+
+    .grid-wrapper-right {
+        width: 100%;
+    }
+}

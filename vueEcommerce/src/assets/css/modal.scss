@@ -1,0 +1,203 @@
+.modal {
+    display: none !important;
+}
+
+.modal-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1440;
+    padding: 3dvw 0;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: modal 1s ease forwards;
+    -webkit-animation: modal 1s ease forwards;
+    zoom: 0;
+
+
+
+    @keyframes modal {
+        100% {
+            zoom: 1;
+        }
+    }
+
+    .modal-content {
+        background-color: white;
+        width: 100%;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        max-width: 54dvw;
+        margin: auto;
+        position: relative;
+        padding: 3dvw;
+
+
+        .modal-title {
+            margin-bottom: 1.7dvw;
+        }
+
+        .modal-subtitle {
+            margin-bottom: 1.4dvw;
+        }
+
+
+        .input-group {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: stretch;
+            display: flex;
+            gap: 0.8vw;
+
+            input {
+                height: 100%;
+                border: 1px solid $color7;
+                flex: 1;
+                align-self: stretch;
+                font-size: 1.2dvw;
+                padding: 0.8dvw 0.8dvw;
+
+                &:focus {
+                    outline: none;
+                }
+
+            }
+
+            .button {
+                padding: 0.8dvw 0.8dvw;
+                width: 100%;
+                background-color: $color7;
+                color: $color1;
+
+                &:hover {
+                    background-color: transparent;
+                    color: $color7;
+                }
+
+            }
+
+
+        }
+
+        .modal-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2.12dvw 0;
+            gap: 0.4dvw;
+
+            span {
+                width: 100%;
+                height: 1px;
+                background-color: #424245;
+            }
+
+            .subtitle {
+                margin-bottom: 0;
+            }
+
+        }
+
+        .modal-grid {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            gap: 1.2dvw;
+            margin: 1.4dvw 0;
+
+            .button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.6dvw;
+                width: 50%;
+
+                svg {
+                    width: 1.77dvw;
+                    height: 1.77dvw;
+                }
+
+                &:hover {
+                    background-color: transparent;
+                    color: $color7;
+                }
+
+            }
+        }
+
+        .modal-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 1.2dvw;
+            margin-top: 8dvw;
+
+
+
+            .link {
+                text-decoration: underline;
+                text-underline-offset: 0.5dvw;
+                width: 50%;
+
+                &:nth-child(1) {
+                    text-align: end;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+#SignUp {
+    .input-group {
+        .h6 {
+            margin-top: 1dvw;
+            color: $color4;
+
+            .link {
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+
+            &:nth-child(1) {
+                color: $color7;
+            }
+        }
+    }
+}
+
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: $color7;
+    width: 3dvw;
+    height: 3dvw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    svg {
+        width: 1.7dvw;
+        height: auto;
+    }
+
+}

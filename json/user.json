@@ -1,0 +1,16 @@
+{
+    "user": [
+        {
+            "user_name": "Jeet Kasundra",
+            "user_phonenumber": "6351829893",
+            "user_pic": "https://images.unsplash.com/flagged/photo-1573740144655-bbb6e88fb18a?auto=format&fit=crop&q=80&w=1935&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "user_email": "Kasundra123@gmail.com"
+        },
+        {
+            "user_name": "Jeet Patel",
+            "user_phonenumber": "6351829893",
+            "user_pic": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "user_email": "Jeet123@gmail.com"
+        }
+    ]
+}

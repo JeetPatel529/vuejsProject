@@ -1,0 +1,95 @@
+{
+  "product-list": [
+    {
+      "product_name": "Art",
+      "product_img": "https://images.unsplash.com/photo-1536849460588-696219a9e98d?auto=format&fit=crop&q=80&w=2031&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "product_price": [
+        {
+          "product_sellprice": "8",
+          "product_disprice": ""
+        }
+      ],
+      "product_details": "lorem8",
+      "product_tag": "Color_Field_Art",
+      "id": 1
+    },
+    {
+      "product_name": "Art Backgrounds",
+      "product_img": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "product_price": [
+        {
+          "product_sellprice": "12",
+          "product_disprice": "9"
+        }
+      ],
+      "product_details": "urna nunc id cursus metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin",
+      "product_tag": "Color_Field_Art",
+      "id": 2
+    },
+    {
+      "product_name": "Art Backgrounds",
+      "product_img": "https://images.unsplash.com/photo-1536849460588-696219a9e98d?auto=format&fit=crop&q=80&w=2031&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "product_price": [
+        {
+          "product_sellprice": "15",
+          "product_disprice": ""
+        }
+      ],
+      "product_details": "lore",
+      "product_tag": "Portrait_painting",
+      "id": 3
+    },
+    {
+      "product_name": "Art Backgrounds",
+      "product_img": "https://images.unsplash.com/photo-1536849460588-696219a9e98d?auto=format&fit=crop&q=80&w=2031&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "product_price": [
+        {
+          "product_sellprice": "1",
+          "product_disprice": ""
+        }
+      ],
+      "product_details": "lrem0",
+      "product_tag": "Digital_Art",
+      "id": 4
+    },
+    {
+      "product_name": "Art",
+      "product_img": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "product_price": [
+        {
+          "product_sellprice": "12",
+          "product_disprice": ""
+        }
+      ],
+      "product_details": "",
+      "product_tag": "Abstract_expressionism_Art",
+      "id": 5
+    },
+    {
+      "product_name": "Art",
+      "product_img": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "product_price": [
+        {
+          "product_sellprice": "3",
+          "product_disprice": ""
+        }
+      ],
+      "product_details": "lorme8",
+      "product_tag": "Portrait_painting",
+      "id": 6
+    },
+    {
+      "product_name": "Art Backgrounds",
+      "product_img": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "product_price": [
+        {
+          "product_sellprice": "1",
+          "product_disprice": ""
+        }
+      ],
+      "product_details": "lorem8",
+      "product_tag": "Digital_Art",
+      "id": 7
+    }
+  ]
+}

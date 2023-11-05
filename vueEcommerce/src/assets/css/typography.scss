@@ -1,0 +1,123 @@
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    color: $color6;
+}
+
+.h1,
+h1 {
+    font-family: $fontsemibold;
+    font-size: 4.65dvw;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.h2,
+h2 {
+    font-family: $fontsemibold;
+    font-size: 3.8vw;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.h3,
+h3 {
+    font-family: $fontmedium;
+    font-size: 2.7vw;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.h4,
+h4 {
+    font-family: $fontmedium;
+    font-size: 2vw;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.h5,
+h5 {
+    font-family: $fontmedium;
+    font-size: 1.45vw;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.h6,
+h6 {
+    letter-spacing: .03vw;
+    font-size: 1.19vw;
+    font-weight: 500;
+    font-family: $fontmedium;
+    line-height: 120%;
+}
+
+.subtitle {
+    margin-bottom: 1.12vw;
+    font-family: $fontregular;
+    font-size: 1.25vw;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.overline {
+    letter-spacing: .04vw;
+    text-transform: uppercase;
+    font-family: $fontregular;
+    font-size: .98vw;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.caption-small {
+    font-size: .98vw;
+    line-height: 120%;
+}
+
+a,
+.link {
+    letter-spacing: .03vw;
+    font-size: 1.12vw;
+    font-family: $fontmedium;
+    font-weight: 500;
+    line-height: 140%;
+    text-decoration: none;
+}
+
+.border-b {
+    border-bottom: 1px solid $color7;
+}
+
+.border-l {
+    border-left: 1px solid $color7;
+}
+
+.border-r {
+    border-right: 1px solid $color7;
+}
+
+.border-t {
+    border-top: 1px solid $color7;
+}
+
+.Hover_Line {
+    width: 100%;
+    position: relative;
+    display: block;
+    text-underline-offset: 0.02dvw;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

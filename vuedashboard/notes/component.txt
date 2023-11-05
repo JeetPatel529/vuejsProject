@@ -1,0 +1,12 @@
+NotificationSideMenu -> Title, NotificationList
+ - NotificationList -> Loop > NotificaitonItem
+ - Notification Item -> Title, Notificaiton sub list
+ - Notification sub list ->
+ - Notification sub list item
+
+
+{
+   notifiactio:["","",""],'
+   activities : [],
+   contacts: [],
+}

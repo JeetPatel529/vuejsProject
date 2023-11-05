@@ -1,0 +1,40 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+}
+.header .Navbar {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  list-style: none;
+}
+.header .Navbar:nth-last-child(1) {
+  flex-direction: row-reverse;
+}
+.header .Navbar:nth-last-child(1) .NavList :nth-of-type(2) {
+  border-right: 0;
+}
+.header .Navbar .NavList {
+  display: flex;
+  align-items: stretch;
+  list-style: none;
+}
+.header .Navbar .NavList li {
+  justify-content: center;
+  align-items: center;
+  padding: 2.23vw;
+  display: flex;
+  width: 100%;
+}
+.header .Navbar .NavList li .nav-link {
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  display: block;
+}/*# sourceMappingURL=navbar.css.map */

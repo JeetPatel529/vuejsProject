@@ -1,0 +1,34 @@
+{
+    "collection": [
+        {
+            "label": "Landscape Painting",
+            "image": "https://jeetpatel529.github.io/eCommerceTheme/assets/img/landscape-painting.jpg",
+            "value": "Landscape_Painting"
+        },
+        {
+            "label": "Color Field Art",
+            "image": "https://jeetpatel529.github.io/eCommerceTheme/assets/img/color-field.jpg",
+            "value": "Color_Field_Art"
+        },
+        {
+            "label": "Fine Art",
+            "image": "https://jeetpatel529.github.io/eCommerceTheme/assets/img/fine-art.jpg",
+            "value": "Fine_Art"
+        },
+        {
+            "label": "Digital Art",
+            "image": "https://jeetpatel529.github.io/eCommerceTheme/assets/img/digit-art.jpg",
+            "value": "Digital_Art"
+        },
+        {
+            "label": "Abstract expressionism Art",
+            "image": "https://jeetpatel529.github.io/eCommerceTheme/assets/img/abstract-expressionism-art.jpg",
+            "value": "Abstract_expressionism_Art"
+        },
+        {
+            "label": "Portrait painting",
+            "image": "https://jeetpatel529.github.io/eCommerceTheme/assets/img/portrait-painting.jpg",
+            "value": "Portrait_painting"
+        }
+    ]
+}
