@@ -13,7 +13,7 @@ export default {
             <img :src="data.product_img" class="absolute inset-0 w-full h-full object-cover rounded-md">
             <div class="absolute bottom-0 left-0 border-t border-r border-solid border-black1 z-20">
                 <div class="bg-white px-4 py-1 flex items-center justify-center rounded-tr-md">
-                    <p class="text-lg">Color Field Art</p>
+                    <p class="text-lg">{{ data.product_tag.replace(/[_/]/g, ' ') }}</p>
                 </div>
             </div>
             <div class="absolute top-0 right-0 border-b border-l border-solid border-black1 z-20">

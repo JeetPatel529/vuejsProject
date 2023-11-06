@@ -3,22 +3,24 @@
 import axios from 'axios';
 
 
+import LayoutWrapper from '../components/LayoutWrapper.vue';
 import Input from '../subcomponents/Input.vue';
 import Label from '../subcomponents/Label.vue';
 import TextareaBox from '../subcomponents/Textarea.vue';
 import InputGroup from '../subcomponents/InputGroup.vue';
 import Select from '../subcomponents/Select.vue';
-import LayoutWrapper from '../components/LayoutWrapper.vue';
+import ErrorMessage from '../subcomponents/ErrorMessage.vue';
 
 export default {
 
     components: {
+        LayoutWrapper,
         Input,
         Label,
         TextareaBox,
         InputGroup,
-        LayoutWrapper,
         Select,
+        ErrorMessage
     },
 
 
@@ -34,6 +36,7 @@ export default {
             selectedVal: "",
             productImg: "",
             ProductTags: [],
+            formSubmitted: false,
         }
     },
 
@@ -59,7 +62,32 @@ export default {
             this.selectedOptionVal = value;
         },
 
+
+        getInputClass(fieldValue) {
+            return {
+                'border-rose-600': !fieldValue && this.formSubmitted,
+                'focus:border-rose-600': !fieldValue && this.formSubmitted
+            };
+        },
+
         async getdata() {
+
+            this.formSubmitted = true
+
+            const requiredFields = [
+                { field: this.productName, name: 'Product Name' },
+                { field: this.sellingPrice, name: 'Selling Price' },
+                { field: this.productDetails, name: 'Product Details' },
+                { field: this.selectedOptionVal, name: 'Product Category' }
+            ];
+
+            for (const { field, name } of requiredFields) {
+                if (!field) {
+                    console.error(`${name} is required`);
+                    return;
+                }
+            }
+
 
             try {
 
@@ -76,8 +104,9 @@ export default {
                     "product_tag": this.selectedOptionVal
                 });
                 if (data.status === 201) {
-                    
+
                 }
+
                 else {
 
                 }
@@ -88,8 +117,9 @@ export default {
         }
 
 
-
     }
+
+
 
 }
 
@@ -121,7 +151,9 @@ export default {
                         <div class="space-y-1.5">
                             <Label label="Product Name" requiredText="*" />
                             <Input placeholder="enter product name" id="Product Name" name="Product Name"
-                                :value="productName" @input="event => productName = event.target.value" />
+                                :value="productName" @input="event => productName = event.target.value"
+                                :class="getInputClass(productName)" />
+                            <ErrorMessage msg="This Filed is reqired" v-if="!productName && formSubmitted" />
                         </div>
 
                         <div class="space-y-1.5"></div>
@@ -160,7 +192,8 @@ export default {
 
                                 <Label label="Selling Price" requiredText="*" />
 
-                                <div class="flex items-center border border-solid border-black1 rounded-md">
+                                <div class="flex items-center border border-solid border-black1 rounded-md"
+                                    :class="getInputClass(sellingPrice)">
 
                                     <div class="px-2 h-full flex items-center justify-center">
                                         <img src="../assets/icons/dollar.svg">
@@ -171,7 +204,7 @@ export default {
                                         @input="event => sellingPrice = event.target.value" />
 
                                     <div class="px-2 h-full flex items-center justify-center cursor-pointer"
-                                        title="Add Discount Price" @click="addDiscount = true">
+                                        title="Add Discount Price" @click="addDiscount = true" v-if="!addDiscount">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                             fill="none">
                                             <path d="M18.75 5.25L5.25 18.75" stroke="#191C1F" stroke-width="1.5"
@@ -187,19 +220,40 @@ export default {
 
                                 </div>
 
+                                <ErrorMessage msg="This Filed is reqired" v-if="!sellingPrice && formSubmitted" />
+
+
                             </div>
 
                         </div>
 
+
                         <div class="space-y-1.5">
                             <Label label="Product categories" requiredText="*" />
-                            <Select :options="ProductTags" @option-selected="onOptionSelected" />
+                            <Select :options="ProductTags" @option-selected="onOptionSelected"
+                                :class="getInputClass(this.selectedOptionVal)" />
+                            <ErrorMessage msg="This Filed is reqired" v-if="!this.selectedOptionVal && formSubmitted" />
                         </div>
 
                         <div class="space-y-1.5 col-span-2">
                             <Label label="Product Details" requiredText="*" />
                             <TextareaBox placeholder="enter product details" id="Product Details" name="Product Details"
-                                :value="productDetails" @input="event => productDetails = event.target.value" />
+                                :value="productDetails" @input="event => productDetails = event.target.value"
+                                :class="getInputClass(productDetails)" />
+                            <div class="flex w-full  items-start justify-between">
+
+                                <div class="space-y-1">
+
+                                    <ErrorMessage msg="This Field is required" v-if="!productDetails && formSubmitted" />
+
+                                    <ErrorMessage msg="Product details must contain more than 52 words"
+                                        v-if="productDetails.length <= 99 && formSubmitted" />
+
+                                </div>
+
+                                <p> {{ productDetails.length }} / 99+</p>
+
+                            </div>
                         </div>
 
                     </div>
