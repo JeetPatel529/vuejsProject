@@ -16,7 +16,7 @@ export default {
     },
     methods: {
         async getProductData() {
-            const response = await axios.get(`http://localhost:8000/product-list`);
+            const response = await axios.get(`http://localhost:3000/product-list`);
             this.productData = response.data;
         }
     },

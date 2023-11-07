@@ -23,7 +23,7 @@ export default {
     },
     methods: {
         async getCategory() {
-            const response = await axios.get(`http://localhost:3000/collection`);
+            const response = await axios.get(`http://localhost:8000/collection`);
             this.categories = response.data;
         }
     },

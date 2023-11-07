@@ -90,32 +90,6 @@
       "product_details": "lorem8",
       "product_tag": "Digital_Art",
       "id": 7
-    },
-    {
-      "product_name": "",
-      "product_img": "",
-      "product_price": [
-        {
-          "product_sellprice": "",
-          "product_disprice": ""
-        }
-      ],
-      "product_details": "",
-      "product_tag": "",
-      "id": 8
-    },
-    {
-      "product_name": "",
-      "product_img": "",
-      "product_price": [
-        {
-          "product_sellprice": "",
-          "product_disprice": ""
-        }
-      ],
-      "product_details": "",
-      "product_tag": "",
-      "id": 9
     }
   ]
 }

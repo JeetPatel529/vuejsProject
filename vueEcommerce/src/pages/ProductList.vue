@@ -19,7 +19,7 @@ export default {
             return category.replace(/_/g, ' ');
         },
         async getProductData() {
-            const response = await axios.get(`http://localhost:8000/product-list`);
+            const response = await axios.get(`http://localhost:3000/product-list`);
             this.productList = response.data;
         },
     },
