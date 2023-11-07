@@ -246,7 +246,7 @@ export default {
 
                                     <ErrorMessage msg="This Field is required" v-if="!productDetails && formSubmitted" />
 
-                                    <ErrorMessage msg="Product details must contain more than 52 words"
+                                    <ErrorMessage msg="Product details must contain more than 99+ words"
                                         v-if="productDetails.length <= 99 && formSubmitted" />
 
                                 </div>

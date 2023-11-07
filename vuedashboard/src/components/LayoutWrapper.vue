@@ -7,8 +7,28 @@ export default {
     components: {
         MainHeader,
         LeftSidebar
-    }
+    },
+    created() {
+        this.checkLogin();
+    },
+    methods: {
+        checkLogin() {
+            const storedUser = JSON.parse(localStorage.getItem("user_login"));
+            const correctEmail = "jeet@gmail.com";
+            const correctPassword = "pass";
+
+            if (storedUser && storedUser.email === correctEmail && storedUser.password === correctPassword) {
+
+            } else {
+
+                this.$router.push({ name: "sign-in" });
+
+            }
+        },
+
+    },
 }
+
 
 
 </script>

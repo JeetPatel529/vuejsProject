@@ -4,27 +4,46 @@ import axios from 'axios';
 
 import LayoutWrapper from '../components/LayoutWrapper.vue';
 import ProductBox from '../subcomponents/ProductBox.vue';
+import Pagination from '../subcomponents/Pagination.vue';
 
 export default {
 
     components: {
         LayoutWrapper,
-        ProductBox
+        ProductBox,
+        Pagination
     },
     data() {
         return {
             productdata: [],
+            currentPage: 1,
+            itemsPerPage: 6,
+            totalPages: 0
         }
     },
     created() {
         this.getProductData();
     },
     methods: {
-        async getProductData() {
-            const response = await axios.get(`http://localhost:3000/product-list`)
-            this.productdata = response.data;
-        }
 
+        async getProductData(pageNumber = 1) {
+            const response = await axios.get(`http://localhost:3000/product-list`, {
+                params: {
+                    _page: pageNumber,
+                    _limit: this.itemsPerPage
+                }
+            });
+
+            this.totalPages = Math.ceil(response.headers['x-total-count'] / this.itemsPerPage);
+
+            this.productdata = response.data;
+            this.currentPage = pageNumber;
+        },
+
+        updatePage(newPage) {
+            this.currentPage = newPage;
+            this.getProductData(newPage);
+        }
 
     }
 
@@ -58,7 +77,11 @@ export default {
             </div>
 
 
-            <div class="pt-6 px-8 border-solid border-t border-black1"></div>
+            <div class="pt-6 px-8 border-solid border-t border-black1">
+
+                <Pagination :currentPage="currentPage" :totalPages="totalPages" v-on:pagechange="updatePage" />
+
+            </div>
 
         </div>
 
