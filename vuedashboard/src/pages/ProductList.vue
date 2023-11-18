@@ -37,6 +37,9 @@ export default {
             this.totalPages = Math.ceil(response.headers['x-total-count'] / this.itemsPerPage);
 
             this.productdata = response.data.product_list;
+
+            console.log(response.data.product_list)
+
             this.currentPage = pageNumber;
         },
 
