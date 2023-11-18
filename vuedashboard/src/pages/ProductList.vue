@@ -27,7 +27,7 @@ export default {
     methods: {
 
         async getProductData(pageNumber = 1) {
-            const response = await axios.get(`http://localhost:3000/product-list`, {
+            const response = await axios.get(`https://jeetpatel529.github.io/vuejsProject/json/product_data.json`, {
                 params: {
                     _page: pageNumber,
                     _limit: this.itemsPerPage
@@ -36,7 +36,7 @@ export default {
 
             this.totalPages = Math.ceil(response.headers['x-total-count'] / this.itemsPerPage);
 
-            this.productdata = response.data;
+            this.productdata = response.data.product_list;
             this.currentPage = pageNumber;
         },
 

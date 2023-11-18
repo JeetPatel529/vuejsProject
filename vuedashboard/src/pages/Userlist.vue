@@ -27,9 +27,9 @@ export default {
 
         async userData() {
             try {
-                const response = await axios.get(`http://localhost:3000/user`);
+                const response = await axios.get(`https://jeetpatel529.github.io/vuejsProject/json/user.json`);
 
-                this.user_list = response.data;
+                this.user_list = response.data.user;
 
             } catch (error) {
                 console.error(error);
